@@ -179,9 +179,6 @@ resource "mongodbatlas_cluster" "test" {
 * `aws_account_id` - (Optional | **AWS Required**) Account ID of the owner of the peer VPC.
 * `route_table_cidr_block` - (Optional | **AWS Required**) Peer VPC CIDR block or subnet.
 * `vpc_id` - (Optional | **AWS Required**) Unique identifier of the peer VPC.
-* `atlas_cidr_block` - (Optional | **AZURE Required**) Unique identifier for an Azure AD directory.
-* `azure_directory_id` - (Optional | **AZURE Required**) Unique identifier for an Azure AD directory.
-* `azure_subscription_id` - (Optional | **AZURE Required**) Unique identifer of the Azure subscription in which the VNet resides.
 * `resource_group_name` - (Optional | **AZURE Required**) Name of your Azure resource group.
 * `vnet_name` - (Optional | **AZURE Required**) Name of your Azure VNet.
 * `gcp_project_id` - (Optinal | **GCP Required**) GCP project ID of the owner of the network peer.
@@ -201,7 +198,7 @@ In addition to all arguments above, the following attributes are exported:
 * `vpc_id` - Unique identifier of the peer VPC.
 * `error_state_name` - Error state, if any. The VPC peering connection error state value can be one of the following: `REJECTED`, `EXPIRED`, `INVALID_ARGUMENT`.
 * `status_name` - (AWS Only) The VPC peering connection status value can be one of the following: `INITIATING`, `PENDING_ACCEPTANCE`, `FAILED`, `FINALIZING`, `AVAILABLE`, `TERMINATING`.
-* `atlas_cidr_block` - Unique identifier for an Azure AD directory.
+* `atlas_cidr_block` - (Required) CIDR block that Atlas uses for your clusters.
 * `azure_directory_id` - Unique identifier for an Azure AD directory.
 * `azure_subscription_id` - Unique identifer of the Azure subscription in which the VNet resides.
 * `resource_group_name` - Name of your Azure resource group.
